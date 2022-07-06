@@ -3,6 +3,6 @@
 // Include me with <template layout="default" />
 </script>
 
-<template>
+<template class="bg-slate-300 w-screen h-screen">
 	<slot />
 </template>
