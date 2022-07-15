@@ -4,6 +4,7 @@ import autoprefixer from 'autoprefixer'
 import laravel from 'vite-plugin-laravel'
 import vue from '@vitejs/plugin-vue'
 import inertia from './resources/scripts/vite/inertia-layout'
+import path from 'path'
 
 export default defineConfig({
 	server: {host: '0.0.0.0'},
@@ -17,4 +18,9 @@ export default defineConfig({
 			],
 		}),
 	],
+	resolve: {
+        alias: {
+            'ziggy': path.resolve(__dirname, 'vendor/tightenco/ziggy/src/js')
+        }
+    },
 })

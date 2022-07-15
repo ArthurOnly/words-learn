@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Route;
+use Inertia\Inertia;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +18,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['middleware' => 'guest'], function () {
     Route::get('/login', [AuthController::class, 'login'])->name('auth.login');
-    Route::post('/login', 'AuthController@login');
+});
+
+Route::get('/game', function () {
+    return Inertia::render('game');
 });
 
 Route::get('/', function () {

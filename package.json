@@ -14,8 +14,9 @@
         "vite-plugin-laravel": "^0.2.0-beta.24"
     },
     "dependencies": {
-        "vue": "^3.2.36",
         "@inertiajs/inertia": "^0.11.0",
-        "@inertiajs/inertia-vue3": "^0.6.0"
+        "@inertiajs/inertia-vue3": "^0.6.0",
+        "random-words": "^1.2.0",
+        "vue": "^3.2.36"
     }
 }
