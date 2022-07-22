@@ -20,9 +20,8 @@ Route::group(['middleware' => 'guest'], function () {
     Route::get('/login', [AuthController::class, 'login'])->name('auth.login');
 });
 
-Route::get('/game', function () {
-    return Inertia::render('game');
-});
+Route::get('/game', [GameController::class, 'show'])->name('game.show');
+Route::post('/game', [GameController::class, 'post'])->name('game.post');
 
 Route::get('/', function () {
     return redirect()->route('auth.login');
